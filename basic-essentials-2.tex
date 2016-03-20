@@ -1,0 +1,239 @@
+\documentclass[letterpaper,12pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Amateur Radio Basic Qualification -- The Essentials}
+\subtitle{Section Two: Practical Operation}
+\author{University of Waterloo Amateur Radio Club}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+
+These notes were prepared from Issue 3 of RIC-7 ``Basic Qualification Question Bank for Amateur Radio Operator Certificate Examinations'', published April 2007.
+They cover 100\% of testable material on the Basic Qualification examination, but do not go beyond what is absolutely necessary to know in order to pass the examination.
+The candidate is encouraged to perform their own research on topics that are not fully covered here.
+
+\section{The Essentials: Section Two}
+
+\subsection{Repeaters}
+
+\begin{itemize}
+\item A repeater is an autonomous amateur radio transceiver that receives a radio signal on one frequency (the ``input'' or ``uplink'' frequency)
+and automatically retransmits it on another frequency (the ``output'' or ``downlink'' frequency).
+\item Since repeaters are permanent installations with registered frequencies, they are usually a common meeting place on the air for local hams.
+Repeaters are useful because they can re-transmit a weak signal with much more power than was used to send it. For this reason,
+repeaters are mainly used to \textit{increase the range} of portable and mobile stations.
+\item Some repeaters have an ``autopatch'', which is a device that allows repeater users to make telephone calls from their stations.
+These are not seen as often on newer installations because of the prevalence of cell phones.
+\item Most repeaters implement a ``time-out timer'' which limits the duration over which someone can transmit into the repeater continuously.
+If transmission continues after the time-out, the repeater will temporarily stop re-transmitting that signal until it stops.
+(This is useful if, for example, someone's push-to-talk button is stuck down.)
+\item Most repeaters use a system known as CTCSS (Continuous Tone-Coded Squelch System) or PL (Privacy Line) to filter unwanted interference
+on the repeater's input frequency. A simple explanation of PL tones is that every transmission into a PL-using repeater
+must have a certain predefined sub-audible tone added to the audio signal in order for the repeater to accept (and retransmit) that signal.
+For example, the VE3KSR repeater in the Waterloo region uses a PL tone of 131.8~Hz. If you transmit into the repeater without providing that tone
+on your signal, you won't make it through the repeater.
+\item Since repeaters are shared systems, you should pause briefly between transmissions when using a repeater to listen for anyone else wanting to use it.
+For the same reason, you should keep transmissions reasonably short because longer transmissions may prevent someone with an emergency from using the repeater and getting help.
+\item If you are trying to contact a specific individual on a repeater, say the call sign of the station you want to contact, then say your call sign.
+\item If you want to join a conversation on a repeater, wait for a break between transmissions and then say your call sign.
+\item The proper way to ask someone their location when using a repeater is simply to ask ``Where are you?''.
+Using CB radio slang like ``What's your 20?'' is universally discouraged, and you will sound like a fool.
+\item FM repeater operation on the two-meter band (144 -- 148~MHz) separates the repeater's input and output frequencies
+by 600~kHz. For example, the VE3KSR repeater in the Waterloo region uses 146.970~MHz as the output frequency and 146.370~MHz as the input frequency.
+\end{itemize}
+
+\subsection{Standard International Phonetics}
+
+To make your call sign better understood, and to spell words letter-by-letter when using voice transmissions,
+you can use Standard International Phonetics (also known as the NATO Phonetic Alphabet).
+You should learn this table and practice it in order to be a good operator who can use and recognize NATO phonetics on the air.
+(This will also help you off the air if you ever need to spell your email address over the telephone!)
+
+\begin{tabular}{c|l}
+Letter & Phonetic letter \\
+\hline 
+A&Alpha \\
+B&Bravo\\
+C&Charlie\\
+D&Delta\\
+E&Echo\\
+F&Foxtrot\\
+G&Golf\\
+H&Hotel\\
+I&India\\
+J&Juliet\\
+K&Kilo\\
+L&Lima\\
+M&Mike\\
+N&November\\
+O&Oscar\\
+P&Papa\\
+Q&Quebec\\
+R&Romeo\\
+S&Sierra\\
+T&Tango\\
+U&Uniform\\
+V&Victor\\
+W&Whiskey\\
+X&X-ray\\
+Y&Yankee\\
+Z&Zulu
+\end{tabular}
+
+Numbers are pronounced digit by digit in the usual way, with the caveat that the number 9 is prounced ``nine-er'' to distinguish it from ``five''.
+
+\subsection{Simplex Operation}
+
+\begin{itemize}
+\item Simplex operation is transmitting and receiving on the same frequency.
+(Contrast with repeater operation, which transmits on one frequency and receives on another.)
+\item You should use simplex operation instead of a repeater when and if contact is possible without using a repeater.
+If for any reason you find yourself trying to operate simplex on a repeater frequency, it is a good idea to change your frequency
+because asking the repeater to change frequency is not practical.
+\item If you are talking to a station using a repeater, one thing to try is listening for that station on the repeater's \textit{input} frequency.
+If you can copy the station clearly, it might be possible to communicate using simplex instead.
+\item It is possible to work simplex on VHF/UHF frequencies as well as HF frequencies.
+Because VHF and UHF frequencies are not usually capable of long-distance communications, it is recommended to reserve them for local calls
+and only use HF when it is desirable to comunicate over a longer distance. This reduces the interference on HF bands.
+\item If you want to use a simplex frequency, listen first so that you do not interrupt a communication already in progress.
+\item To put out a general call to ``any listening station'' is known as ``calling CQ''. (This is probably because saying the letters C-Q sounds like the phrase ``seek you'',
+like you are looking for someone.) To call CQ on voice, say ``CQ'' three times, followed by ``this is'', followed by your call sign spoken three times.
+To respond to a voice CQ call, say the other station's call sign once, then ``this is'', then your call sign given phonetically.
+\item Here's an example of that last one. Suppose I (VE3TUX) want to see if I can reach anyone on simplex.
+I start by picking a clear frequency, listening for a bit to make sure it really is free, and then saying 
+``C Q C Q C Q this is Victor Echo Three Tango Uniform X-Ray Victor Echo Three Tango Uniform X-Ray Victor Echo Three Tango Uniform X-Ray''.
+Now suppose my friend Peter (VA3VCF) hears my call and wants to respond. He will say ``Victor Echo Three Tango Uniform X-Ray this is Victor Alpha Three Victor Charlie Foxtrot''
+and now that our handshake is complete we can have a nice conversation.
+Remember to give your callsign at least every 30 minutes if you continue talking for that long.
+A nice thing I might say when I am done is ``Seven Three'' (73), which is short for ``best wishes''.
+To end the conversation properly, I could say ``Victor Echo Three Tango Uniform X-Ray signing off'' or something like that, if I am going to stick around for a while,
+or ``Victor Echo Three Tango Uniform X-Ray clear / shutting down'' if I am turning off my radio.
+\item There is a mode of operation popular for voice called Single Sideband (SSB). You will learn more about it a bit later on, but
+it is most popular in the HF bands and rarely heard elsewhere. An important thing to know before you make or answer a call is which sideband to use.
+Typically, lower sideband (LSB) is used on the 40m and 80m bands (7~MHz and 3.5~MHz), and upper sideband (USB) is used elsewhere. This is primarily for historical reasons,
+but has become convention.
+\item The best way to tell if a certain band is ``open'' for communication with a particular distant location is to listen for signals from that area
+from an amateur beacon station or a foreign broadcast or television station on a nearby frequency.
+\end{itemize}
+
+\subsection{Minimizing Interference}
+
+\begin{itemize}
+\item It bears repeating, but before you transmit on any frequency, listen to make sure others are not already using the frequency.
+\item One way to shorten transmitter tune-up time on the air to cut down on interference is to tune into a ``dummy load'', which is 
+an electrical device that does not radiate RF energy but has similar electrical properties to an antenna.
+\item If you contact another station and your signal is reported as extremely strong and perfectly readable,
+you may be able to reduce your power output to the minimum necessary. This reduces interference to others who may be operating nearby.
+\item Occasionally groups of hams may decide to meet on a pre-coordinated frequency at a specified time.
+This is known as a ``net''. If you are the net control station (coordinator) of a daily HF net,
+and you find the net frequency is in use just before the net begins,
+you should conduct the net on a frequency 3 to 5~kHz away from the regular net frequency.
+Conversely, if a net is about to begin on a frequency that you are using, as a courtesy to the net you should move to a different frequency.
+\item If propagation changes during your contact and you notice other activity nearby increasing interference, move your contact to a different frequency.
+\item To avoid interfering with other stations when operating on single sideband, allow a minimum frequency separation of 3~kHz from a contact in progress to minimize interference.
+\end{itemize}
+
+\subsection{CW (Morse) Operation}
+
+\begin{itemize}
+\item You should transmit on Morse at any speed which you can reliably receive.
+\item The procedural signal ``CQ'' means ``calling any station''.
+\item The procedural signal ``DE'' means ``from'' or ``this is''.
+\item The correct way to call CQ on Morse is to send the letters ``CQ'' three times, followed by ``DE'', then your call sign sent three times.
+\item To respond to a CQ call on Morse is to send the other station's call sign twice, followed by ``DE'', followed by your call sign twice.
+\item The procedural signal ``K'' means ``any station transmit''.
+\item The term ``DX'' means ``distant station''.
+\item The term ``73'' means ``best regards'' (also heard on voice as ``seven three'').
+\item ``Full break-in telegraphy'' means receiving incoming signals between outgoing Morse dots.
+\item When selecting a CW transmitting frequency, keep a minimum frequency separation of 150 to 500~Hz from a contact in progress.
+\item Good Morse telegraphy operators listen to the frequency to make sure that it is not in use before transmitting.
+\end{itemize}
+
+\subsection{Signal Reports}
+
+\begin{itemize}
+\item ``RST'' signal reports are a short way to describe signal reception.
+``RST'' stands for ``readability'', ``signal strength'', and ``tone''.
+The signal report is given as a two-digit code (corresponding to R and S)
+or a three-digit code (corresponding to R, S, and T).
+\item The code for R goes from 1 to 5, where 1 means ``unreadable'' and 5 means ``perfectly readable''.
+\item The code for S goes from 1 to 9, where 1 means ``faint signal'' and 9 means ``very strong''.
+\item The code for T (only given during CW or digital) goes from 1 to 9, where 1 means ``very rough tone'' and 9 means ``perfect tone''.
+\item The ``S'' in RST is usually measured with an S meter, or a relative signal-strength indicator.
+If a signal report is given ``9 plus $N$ dB'', it means that the reading is 20 decibels greater than strength 9 (which is an extremely strong signal).
+\item An increase in transmitter power of four times corresponds to an increase of approximately one S unit on an S meter.
+\end{itemize}
+
+\subsection{Q Signals}
+
+Q signals are short three-letter abbreviations that all begin with the letter Q. They save time on CW and digital communications.
+Think of them as the ``SMS speak'' of the ham radio world. And now you know why they are a problem.
+
+I'm really sorry about this part of the exam. This segment is pure memorization, even worse than anything else so far.
+The meaning of these signals is not at all obvious just by looking at or hearing them, and what's worse is that for the most part
+you won't encounter these unless you are operating CW (or very rarely on some digital modes)
+because they provide no benefit on voice. I'll spare you a lot of trouble by only putting the ones you will actually be tested on,
+and you can look up the rest yourself if you encounter them.
+
+One thing to know is that you can put a question mark after any Q-signal to turn it into a question.
+For example, ``QRS?'' means ``Should I send more slowly?''. A response of ``QRS'' means ``Send more slowly.''.
+
+\begin{itemize}
+\item QRS -- send more slowly
+\item QTH -- my location is
+\item QRL? -- is this frequency in use?
+\item QSY -- change frequency
+\item QSO -- contact in progress (this one is unfortunately somewhat common off the air as well, as in
+``I had a really nice cue-soh with John yesterday evening'')
+\item QRZ? -- is someone calling me?
+\item QRM -- I am being interfered with
+\item QRN -- I am troubled by static
+\item QRX -- I will call you again
+\item QSL -- I acknowledge receipt (most commonly seen with ``QSL cards'')
+\end{itemize}
+
+\subsection{Emergency Operation}
+
+\begin{itemize}
+\item If you are in contact with another station and you hear an emergency call for help on your frequency,
+immediately stop your contact and take the emergency call. Acknowledge the station in distress, determine its location,
+and find out what assistance may be needed. If you cannot render assistance, you should maintain watch until you are
+certain that assistance will be forthcoming.
+\item When operating voice, the proper distress call to use is ``MAYDAY''.
+\item When operating CW, the proper distress call to use is ``SOS''.
+\item You may only transmit ``MAYDAY'' or ``SOS'' in a life-threatening distress situation.
+\item The proper way to interrupt a repeater conversation to signal a distress call is to say ``BREAK'' twice, followed by your call sign.
+\item It is a good idea to have a way to operate your amateur statio without using commercial power lines
+(e.g. battery-powered handheld, generator) so you may provide communications in an emergency.
+\item The most important accessory to have for a hand-held radio in an emergency is a charged spare battery -- preferably several.
+\item A dipole antenna is small, simple, and fast to set up and store. It is a good choice as part of a portable HF station that could be
+assembled in an emergency.
+\item In order of priority, a distress message comes before an urgency message, which comes before a safety message.
+\end{itemize}
+
+\subsection{International Operation}
+
+\begin{itemize}
+\item A ``QSL card'' is a written proof of communication between two amateurs. They are typically exchanged for long-distance contacts made over HF.
+\item An azimuthal map is a map projection centered on a particular location that is used to determine the shortest path between points on the earth's surface.
+It is useful when orienting a directional HF antenna toward a distant station.
+\item When orienting a directional antenna, it may be pointed along the ``short path'', which is directly at the remote station,
+or along the ``long path'', which is 180 degrees away from the remote station.
+If you cannot hear a station on the short path, it may be worth trying the long path to see if propagation is different.
+\item A station logbook is important for recording contacts for operating awards, and very important for handling neighbour interference complaints.
+A well-kept log preserves your fondest amateur radio memories for years (this quoted verbatim from the question bank).
+However, Industry Canada does not formally require any operator to keep a logbook.
+\item Station logs and QSL cards are always kept in UTC (Coordinated Universal Time). This time is based in Greenwich, England (formerly Greenwich Mean Time, GMT).
+\item To set your station clock accurately to UTC, you could receive the most accurate time off the air from
+a time station such as CHU, WWV, or WWVH.
+\end{itemize}
+
+\end{document}
+

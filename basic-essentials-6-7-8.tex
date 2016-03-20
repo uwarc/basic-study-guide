@@ -1,0 +1,384 @@
+\documentclass[letterpaper,12pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Amateur Radio Basic Qualification -- The Essentials}
+\subtitle{Sections Six, Seven, and Eight: Transmission Lines, Antennas, Propagation, and Interference}
+\author{University of Waterloo Amateur Radio Club}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+
+These notes were prepared from Issue 3 of RIC-7 ``Basic Qualification Question Bank for Amateur Radio Operator Certificate Examinations'', published April 2007.
+They cover 100\% of testable material on the Basic Qualification examination, but do not go beyond what is absolutely necessary to know in order to pass the examination.
+The candidate is encouraged to perform their own research on topics that are not fully covered here.
+
+\section{The Essentials: Section Six (Transmission Lines and Antennas}
+
+\subsection{Characteristic Impedance}
+
+\begin{itemize}
+\item A \textbf{feed line} connects your transceiver to your antenna.
+\item Every feedline has a \textbf{characteristic impedance}. It is determined by the physical dimensions
+and relative positions of the conductors. It is \textbf{not} a function of the length of the line,
+the velocity of energy on the line,
+or the frequency at which the line is operated.
+\item The characteristic impedance of a feedline is defined as the value of the pure resistance which, if connected to the end of the line,
+will absorb all the power arriving through it.
+\item Terminating a transmission line in its characteristic impedance makes it look like an infinitely long line. 
+\item Generally the impedance of a line decreases as the diameter of the line increases.
+\item Transmission lines are very long and \textbf{propagation delay} is a factor in their operation.
+\end{itemize}
+
+\subsection{Feedline}
+
+\begin{itemize}
+\item Coaxial cable is a type of feedline where one conductor forms a cylinder or ``shield'' around the other (they are separated by a dielectric to prevent
+them from shorting together). Coaxial cable is also shielded on the outside, so the conductors are not exposed. Unlike some types of feedline
+where the conductors are unshielded, coax can be buried in the ground without the risk of adverse effects such as water leaks.
+\item Parallel-conductor feedline is made from two wires side-by-side held apart by insulating rods.
+(This is also known as ``open-conductor ladder line'' or ``open-wire''.)
+\item A ``balanced line'' is a transmission line whose two conductors have equal impedances. An ``unbalanced line'' is a transmission line
+where the two conductors have unequal impedances, such as a coaxial cable (in particular, it is a feedline where one conductor is connected to ground).
+\item A \textbf{balun}, or ``balanced-to-unbalanced'', allows a balanced antenna to be fed with an unbalanced feedline, or vice-versa.
+\item Baluns can also perform impedance conversion; for example, a 75-ohm line could be matched to a 300-ohm feedpoint with a 4-to-1 balun.
+\end{itemize}
+
+\subsection{Practical Feedline}
+
+\begin{itemize}
+\item Coaxial cable makes a good feedline because it is weatherproof and its impedance matches that of most amateur antennas. However, it is difficult to make at home.
+Coax is the best feedline to use if it must be put near metal objects. 
+\item Parallel conductor feedline does not work well when tied down to metal objects, and it cannot operate under high power. 
+\item A popular type of amateur feedline is known as RG-213.
+This is a great feedline on HF.
+ The connector that is typically used with this is the PL-259 or, colloquially, ``UHF'' connector.
+\item Old handheld transceivers used a ``BNC connector'' to connect an antenna. (Modern handhelds use an ``SMA connector''.)
+\item An N-type connector has very low loss at UHF, since it is designed to operate at these frequencies. (SMA is also a good choice.)
+\item Antenna connectors should regularly be cleaned, tightened, and re-soldered to help keep their resistance at a minimum.
+\item Very old TV twin-lead feedline can be used for feedline in an amateur station, but if you still have some just lying around, \textit{why?}
+Anyway, its impedance is approximately 300 ohms.
+\end{itemize}
+
+\subsection{Loss}
+
+\begin{itemize}
+\item Using good quality coaxial cable and connectors for a UHF antenna system is essential for keeping RF loss low.
+\item Parallel conductor feedline will operate well with a high SWR and has less loss than coaxial cable.
+\item You should always use the shortest amount of feedline possible in order to minimize loss. Remember that
+signal loss increases proportional to length.
+\item Signal loss also increases with increasing frequency. \textbf{The question bank gets this wrong.} 
+\item Losses occurring on a transmission line between the transmitter and the antenna results in less RF power being radiated.
+\item The lowest loss feedline on HF is open-wire ladder line.
+\item RF feedline losses are expressed in units of decibels per unit length.
+Doubling the amount of feedline used also doubles the line loss!
+\end{itemize}
+
+\subsection{Standing Wave Ratio (SWR)}
+
+\begin{itemize}
+\item Standing wave ratio, or SWR, is a measure of the efficiency of an antenna system in terms of the impedance match.
+Technically, it is defined as the ratio of maximum to minimum voltages on a feed line.
+\item An SWR meter measures the quality of the impedance match by measuring and comparing forward and reflected voltage in the antenna system.
+\item An SWR of ``1:1'' means the best possible impedance match has been obtained.
+\item Any SWR of less than ``1.5:1'' means the impedance match is fairly good.
+\item A very high SWR reading means that the antenna is the wrong length, or there may be an open or shorted connection
+somewhere in the feedline.
+\item A very jumpy SWR reading may mean poor electrical contact between parts of an antenna system.
+\item If your antenna feedline gets hot when you are transmitting, the SWR may be too high, or the feed line loss may be too high.
+\item If the characteristic impedance of the feedline does not match the antenna input impedance, standing waves are produced in the feedline
+and the SWR will be higher than ``1:1''. This leads to reduced transfer of RF energy to the antenna.
+\item The SWR can be calculated if the impedance of the feedline and the antenna are known. For example, if the antenna's impedance is 200 ohms
+and the feedline's impedance is 50 ohms, the SWR is ``4:1''.
+\end{itemize}
+
+\subsection{Impedance Matching}
+
+\begin{itemize}
+\item An antenna tuner might allow an antenna to be used on a band it was not designed for. 
+The goal of an antenna tuner is to match a transceiver to a mismatched (wrong impedance) antenna system.
+\item A power source will deliver maximum power to the load when the impedance of the load is equal
+to the impedance of the source.
+\item If an antenna is correctly connected to a transmitter, the length of the transmission line will have no effect on the matching.
+\end{itemize}
+
+\subsection{Polarization}
+
+\begin{itemize}
+\item The polarization of an electromagnetic wave is given by the direction of its electric field vector.
+For example, a horizontally-polarized wave means the electric field is parallel to the earth's surface.
+\item A Yagi antenna has horizontal polarization when its elements are parallel to the earth's surface.
+\item A half-wavelength antenna has vertical polarization when it is perpendicular to the earth's surface.
+\item An ``isotropic antenna'' is a hypothetical, ideal point source that is useful for determining certain antenna parameters.
+Its radiation pattern is a perfect sphere.
+\item VHF signals from a mobile station using a vertical whip antenna will be best received using a vertical ground-plane antenna.
+(Remember to keep polarization in mind. A vertical antenna will receive a vertically polarized wave at greater strength
+than the equivalent horizontal antenna.)
+\end{itemize}
+
+\subsection{Practical Antennas and Waves}
+
+\begin{itemize}
+\item If an antenna is made longer, its resonant frequency decreases; conversely, shortening an antenna increases its resonant frequency.
+(Think about the antenna's length being correlated with the wavelength it is tuned for.)
+\item Adding a series inductance to an antenna has the effect of decreasing the resonant frequency.
+(Think of an inductor as a coiled-up wire, which effectively lengthens the antenna.)
+\item The speed of a radio wave is the same as the speed of light. (You should remember this from a previous chapter.)
+\item At the end of suspended antenna wire, insulators may be used to limit the electrical length of the antenna.
+\item One solution to multi-band operation with a shortened radiator is the ``trap dipole'' or ``trap vertical''.
+The traps used are actually parallel inductor-capacitor networks.
+However, trap antennas radiate harmonics.
+\end{itemize}
+
+\subsection{Antenna Characteristics}
+
+\begin{itemize}
+\item A parasitic beam antenna is an antenna where some elements obtain their radio energy by induction or radiation from a driven element.
+\item The bandwidth of a parasitic beam antenna can be increased by using larger diameter elements.
+\item Placing a slightly shorter parasitic element $\frac{1}{10}$ of a wavelength away from a dipole antenna has the effect of creating a major lobe
+in the antenna pattern in the horizontal plane, toward the parasitic element.
+\item Placing a slightly longer parasitic element $\frac{1}{10}$ of a wavelength away from a dipole antenna has the effect of creating a major lobe
+in the antenna pattern in the horizontal plane, away from the parasitic element and toward the dipole.
+\item The previous two points give a bit of the theory behind the Yagi-Uda antenna; more on this later. 
+\item \textbf{Bandwidth} is the property of an antenna which defines the range of frequencies to which it will respond.
+\item A half-wave dipole has about 2.1~dB of gain over an isotropic radiator.
+\item Antenna \textbf{gain} is the numerical ratio relating the radiated signal strength of an antenna to that of another antenna.
+(Typically these are compared to an isotropic radiator, ``dBi'', or a dipole, ``dBd''.)
+\item The radiation characteristic of a half-wave dipole is minimum radiation from the ends and maximum radiation from broadside.
+\item The \textbf{front-to-back} ratio of a beam or directional antenna is the ratio of the maximum forward power in the major lobe
+to the maximum backward power radiation.
+\end{itemize}
+
+\subsection{Quarter-Wave and Half-Wave Antennas}
+
+\begin{itemize}
+\item To calculate the length in meters (feet) of a quarter-wavelength vertical antenna,
+divide 71.5 (234) by the antenna's operating frequency in megahertz.
+\item To calculate the length for a half-wavelength antenna, do it for a quarter-wave antenna and then multiply by 2.
+\item A 5/8-wavelength vertical antenna is better than a 1/4-wavelength vertical antenna for VHF or UHF mobile operations
+because it typically has better gain and the angle of radiation is low.
+\item If a magnetic-base whip antenna is placed on the roof of a car, radio energy goes out equally well in all horizontal directions.
+\item Downward sloping radials on a ground plane antenna are useful because they bring the feed point impedance closer to 50~ohms
+(in general, they increase the impedance over horizontal radials).
+\item The main characteristic of a vertical antenna is that it will receive signals equally well from all compass points around it.
+\item A loading coil is often used with an HF mobile vertical antenna to tune out capacitive reactance.
+\end{itemize}
+
+\subsection{Yagi-Uda Antennas}
+
+\begin{itemize}
+\item A typical Yagi-Uda antenna has one driven element.
+\item To calculate the length of a driven element for a Yagi-Uda antenna, calculate it as though it were a half-wavelength antenna. (See previous section.)
+\item The ``director'' element of a Yagi antenna is always about 10\% shorter than the driven element; the ``reflector'' element
+is always about 10\% longer. If you have to calculate their lengths, first find the length of the driven element and then apply the correction.
+\item Increasing the boom length and adding directors to a Yagi antenna has the effect of increasing the gain.
+\item A Yagi antenna with wide element spacing has high gain, less critical tuning, and wider bandwidth.
+\item Yagi antennas are often used for communication in the 20-meter bands because they help reduce interference from other stations off to the side or behind.
+\item A good way to get maximum performance from a Yagi antenna is to (use an antenna design and simulation program to) optimize the lengths and spacings of the elements.
+\item The best overall choice for spacing between elements of a Yagi antenna is 0.2 of a wavelength.
+\item ``Stacking'' two antennas has the effect of doubling the effective radiated power; therefore, stacking two 10~dB-gain antennas
+results in an antenna system with an overall 13~dB gain.
+\end{itemize}
+
+\subsection{Dipole Antennas}
+
+\begin{itemize}
+\item One disadvantage of a random wire antenna (i.e. just a long piece of wire that you found and hooked up)
+is that you may (read: will) experience RF feedback in your station (because your random wire is almost certainly mismatched).
+\item The low-angle radiation pattern of an ideal half-wavelength dipole HF antenna installed parallel to the earth is a figure-eight, perpendicular to the antenna.
+\item The impedance of a dipole antenna at the feedpoint is about 73 ohms; the impedance of a folded dipole at the feedpoint is about 300 ohms.
+\item The bandwidth of a folded dipole antenna is greater than that of a simple dipole antenna.
+\item A ``doublet antenna'' has the same electrical length as a half-wave dipole (so use the same formula to calculate its length).
+\end{itemize}
+
+\subsection{Loop Antennas}
+
+\begin{itemize}
+\item A ``cubical quad antenna'' is comprised of two or more parallel four-sided wire loops, each approximately one electrical wavelength long.
+\item A ``delta loop antenna'' is a type of cubical quad antenna, except with triangular elements rather than square ones.
+\item The total length of the driven element in a quad or delta loop antenna is approximately one wavelength.
+If you have to calculate the length of only one leg, calculate the length of the whole driven element and then divide by the number of sides.
+\item Two-element delta loops and quads compare favourably with a three-element Yagi.
+\item Compared to a dipole antenna, the cubical quad antenna has more directivity in both the horizontal and vertical planes.
+\item Moving the feed point of a multi-element quad antenna from a side parallel to the ground to a side perpendicular to the ground
+changes the antenna polarization from horizontal to vertical.
+\end{itemize}
+
+\section{The Essentials: Section Seven (Propagation)}
+
+\subsection{Ground Waves and Sky Waves}
+
+\begin{itemize}
+\item \textbf{Line-of-sight propagation} usually occurs from one handheld VHF transceiver to another nearby. Propagation occurs by direct wave, without interacting with the earth or the ionosphere.
+\item When a signal is returned to the earth by the ionosphere, this is called \textbf{sky-wave propagation} (also known as ``ionospheric wave'').
+\item Radiation that is affected by the surface of the earth is called \textbf{ground-wave propagation}.
+\item Sky-wave propagation has much longer range than ground-wave propagation. Reception of HF radio waves beyond 4000~km is generally possibly by sky-wave.
+\item At HF frequencies, line-of-sight transmission between two stations uses mainly the ground wave.
+\item The distance travelled by ground waves is less at higher frequencies.
+\end{itemize}
+
+\subsection{The Ionosphere}
+
+\begin{itemize}
+\item The ionosphere is a charged layer in the outer atmosphere formed by ionizing solar radiation. Ultraviolet (UV) radiation is most responsible for this ionization.
+\item The ionosphere is most ionized at midday and least ionized just before dawn.
+\item The ionosphere is composed of several ``regions''. The \textbf{D region} is the closest ionospheric region to earth. Because it is relatively close to the ground,
+  it is the least useful for long-distance radio wave propagation.
+\item The \textbf{E region} exists above the D region and below the F region.
+\item The \textbf{F1 and F2 regions} of the ionosphere only exist in the daytime. They exist when the F region splits due to heavy ionization.
+  These regions are the farthest from earth. The F2 region in particular is the highest ionospheric region
+  and so it is responsible for the longest distance radio wave propagation.
+\item During the day, the D region is heavily ionized and
+  absorbs low-frequency radio waves, and so the longest wavelength bands (160m, 80m, 40m) are next to useless for everything except short-distance communications while the sun is up.
+\end{itemize}
+
+\subsection{Skip Zones and Ionospheric Interaction}
+
+\begin{itemize}
+\item A \textbf{skip zone} is an area which is too far away for ground-wave propagation, but too close for sky-wave propagation.
+  Technically, it is defined as the area between the end of the ground wave and the point where the first refracted (sky) wave returns to earth.
+  (The distance from the transmitter to the end of the skip zone is the ``skip distance''.)
+  Radio waves tend to ``skip'' over it when propagating.
+  \item Skip effects are due to reflection and refraction from the ionosphere.
+\item The maximum distance along the earth's surface that is normally covered in one ``hop'' using the F2 region is 4500~km (2500~miles).
+\item The maximum distance normally covered in one ``hop'' using the E region is 2160~km (1200~miles).
+\item For radio signals, the skip distance is determined by the height of the ionosphere and the angle of radiation.
+\item The skip distance of a sky wave will be greatest when the angle between ground and radiation is smallest.
+\item If the height of the reflecting layer of the ionosphere increases, the skip distance of an HF transmission becomes greater.
+\end{itemize}
+
+\subsection{Fading}
+
+\begin{itemize}
+\item Two or more parts of a radio wave can follow different paths during propagation, and this may result in phase differences at the receiver.
+  This ``change'' in signal strength is called \textbf{fading}.
+\item The usual effect of ionospheric storms is to cause a fade-out of sky-wave signals.
+\item On the VHF and UHF bands, polarization of the receiving antenna is very important, yet on HF hands it is relatively unimportant. This is because the
+  ionosphere can (and will) change the polarization of the signal from moment to moment.
+\item Fading of a transmitted signal is much more pronounced at wider bandwidths.
+\item Reflections, refractions, and Faraday rotation (interaction with a magnetic field) all cause polarization changes. ``Parabolic interaction'' does not (I could not find a definition of this term).
+  \item Reflection of an SSB transmission from the ionosphere causes relatively little (or no) phase-shift distortion.
+\end{itemize}
+
+\subsection{Space Weather}
+
+\begin{itemize}
+  \item Solar activity influences all radiocommunication beyond ground-wave or line-of-sight ranges.
+\item \textbf{Sunspots} are magnetic anomalies on the surface of the sun. The more sunspots there are, the greater the ionization.
+\item An average sunspot cycle is 11 years.
+\item \textbf{Solar flux} is the amount of radio energy emitted by the sun. The solar flux index is a measure of solar activity that is taken at a specific frequency.
+\item Electromagnetic and particle emissions from the sun influence propagation.
+\item When sunspot numbers are high, frequencies up to 40~MHz or higher are normally usable for long-distance communication.
+  \item The ability of the ionosphere to reflect high frequency radio signals depends on the amount of solar radiation.
+\end{itemize}
+
+\subsection{Maximum Usable Frequency}
+
+\begin{itemize}
+\item The \textbf{maximum usable frequency} (or ``critical frequency'') is the highest frequency signal that will reach its destination. The MUF will vary based on the amount of radiation,
+  mainly UV radiation, received from the sun.
+\item Signals higher in frequency than the critical frequency will pass through the ionosphere without interacting.
+  Signals lower than the MUF will be bent back to the earth.
+\item During a sudden ionospheric disturbance, trying a higher frequency might be possible in order to continue HF communications.
+\item HF beacons are useful to listen for in determining propagation. For example, to determine whether the MUF supports 28~MHz propagation between your station and western Europe,
+  you can listen for signals on the 10-meter beacon frequency.
+\item The 20-meter band usually supports worldwide propagation during daylight hours at every point in the solar cycle.
+\item Due to high ionization and solar interaction, communication on the 80 meter band and 160 meter band is generally most difficult during daytime in summer.
+  \item The ``optimum working frequency'' provides the best long-range HF communication capabilities. It is usually slightly lower than the maximum usable frequency.
+\end{itemize}
+
+\subsection{Extended Propagation}
+
+\begin{itemize}
+\item The E region most affects sky-wave propagation on the 6 meter band.
+  \item The ``tropospheric wave'' is the portion of the radiation kept close to the earth's surface due to bending or ducting in the atmosphere.
+\item ``Tropospheric ducting'' of radio waves is caused by a temperature inversion in the atmosphere. It can affect VHF transmissions
+  by allowing them to propagate much further away than normally possible.
+\item \textbf{Sporadic-E} is a condition of patches of dense ionization at E-region height. Sporadic-E typically allows for greatly extended propagation on the 6-meter band.
+\item Auroral propagation can be used to extend propagation as well, since
+  it takes place at E-region height; in North America, pointing a directional antenna north will take maximum advantage of this effect.
+\item Modes such as CW and SSB are best for auroral propagation.
+\item Excluding enhanced propagation modes, the normal range of VHF tropospheric propagation is 800~km (500~miles).
+\end{itemize}
+
+\subsection{Scatter}
+
+\begin{itemize}
+\item Ground-wave propagation is the best propagation mode for two stations within each other's skip zone on a certain frequency.
+\item If you receive a weak, distorted signal from a distance, and close to the maximum usable frequency, you are probably experiencing \textbf{scatter} propagation.
+  Scatter allows a signal to be detected at a distance too far for ground-wave propagation but too near for sky-wave propagation.
+\item HF scatter signals can be recognized by a wavering sound in the received signal. They may also sound distorted because of auroral activity and changes in the earth's magnetic field.
+\item HF scatter signals are usually very weak, because only a small part of the signal energy is scattered into the skip zone.
+\item Scatter propagation on HF most often occurs when communicating on frequencies above the maximum usable frequency.
+\item Meteor scatter, tropospheric scatter, and ionospheric scatter are all scatter modes; ``absorption scatter'' is not.
+\item Meteor scatter is most effective on the 6-meter band.
+\item Side scatter, back scatter, and forward scatter are all scatter modes; ``inverted scatter'' is not.
+\end{itemize}
+
+\section{The Essentials: Section Eight (Interference)}
+
+\subsection{Receiver Overload}
+
+\begin{itemize}
+\item Receiver overload (or front-end overload) occurs when a receiver experiences interference caused by strong signals from a nearby transmitter.
+\item If the interference is about the same no matter what frequency is being used for the transmitter, front-end overload is probably occurring.
+  The overloading signal can appear wherever the receiver is tuned. This can also cause ``cross-modulation'', where two signals are received simultaneously;
+  the undesired signal will be heard in the background of the desired signal.
+\item Analog televisions use frequencies around 54-82~MHz. If someone is still using an analog TV and you think your signals on HF are overloading its receiver,
+  try connecting a \textit{high-pass filter} to the receiver input. The idea is to attenuate your HF signals, which are on frequencies below 54~MHz,
+  while still passing TV frequencies. (Careful application of filters is a good strategy for reducing interference in general; more on this later.)
+\end{itemize}
+
+\subsection{Audio Interference}
+
+\begin{itemize}
+\item Bypass capacitors can be used to reduce or eliminate audio-frequency interference in home entertainment systems.
+\item If a properly operating amateur station is the cause of interference to a nearby telephone, ask the telephone company to install RFI filters.
+\item If audio rectification of a nearby single-sideband phone transmission occurs in a public address system, you might hear distorted speech from the transmitter's signals.
+If a CW transmission gets into a PA system, you will hear on-and-off humming or clicking.
+\item A good way to minimize the possibility of audio rectification of your transmitter's signals is by ensuring that all station equipment is properly grounded.
+\item A ferrite core can be used to minimize the effect of RF pickup by audio wires connected to stereo speakers. Another way is to shorten the speaker wires (they can act as antennas).
+\end{itemize}
+
+\subsection{Transmitter Interference}
+
+\begin{itemize}
+\item In CW transmissions, key clicks (a form of local RF interference) are produced by the making and breaking of the circuit at the Morse key.
+They are the result of carrier rise and decay times that are too sharp.
+\item A ``key-click filter'' (typically made from a simple choke-capacitor circuit) can be used to prevent key clicks.
+\item If someone tells you that signals from your handheld are interfering with other signals on a nearby frequency, your handheld may be transmitting spurious emissions.
+This means your transmitter is sending signals outside the frequency or band where it is transmitting.
+\item Operating a transmitter without the cover and shielding may result in spurious emissions from unshielded RF electronics.
+\item A ``parasitic oscillation'' is an unwanted signal developed in a transmitter. They may be found at high or low frequencies, and on either side of the transmitter's displayed frequency.
+\end{itemize}
+
+\subsection{Harmonic Radiation}
+
+\begin{itemize}
+\item Harmonic radiation is a form of interference that manifests itself as unwanted signals at frequencies which are \textbf{multiples of the chosen transmit frequency}.
+\item Harmonic radiation may result in out-of-band signals due to the frequency multiplication that takes place.
+\item If a neighbour reports interference on one or two TV channels only when you transmit on 15 meters, the interference is probably caused by harmonic radiation.
+\item A poorly tuned transmitter connected to a multi-band antenna may end up transmitting harmonic radiation.
+\item ``Splatter interference'' is caused by overmodulation of a transmitter. This can often be caused by driving an amplifier stage into non-linear operation. The best way to fix this is to reduce the microphone gain.
+\item Excessive harmonics are usually produced by overdriven stages.
+\end{itemize}
+
+\subsection{Filters}
+
+\begin{itemize}
+\item A \textbf{low-pass filter} is most useful for eliminating harmonic radiation at the transmitter. Install it as close to the transmitter as possible.
+\item A \textbf{high-pass filter} is most useful for eliminating cross-modulation or unwanted RF interference at television sets, etc. Install it as close to the receiver as possible.
+\item A \textbf{band-pass filter} blocks RF energy above and below a certain range.
+\item A \textbf{band-reject filter} passes frequencies on each side of a certain range, but attenuates all frequencies that fall within that range.
+\item Filters have impedances too! Make sure that the impedance of a filter is matched with the impedance of the transmission lines being used.
+\end{itemize}
+
+\end{document}
+
